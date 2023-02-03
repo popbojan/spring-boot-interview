@@ -1,9 +1,9 @@
-package com.check24.demo.command;
+package com.interview.demo.command;
 
 import java.util.Arrays;
 
 /**
- * RUN: java -ea src/main/java/com/check24/demo/command/CheckAnagrams.java "flop aaa" "olfp aaa"
+ * RUN: java -ea src/main/java/com/interview/demo/command/CheckAnagrams.java "flop aaa" "olfp aaa"
  * -ea stands for 'enable assertion'
  */
 public class CheckAnagrams {

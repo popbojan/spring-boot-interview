@@ -1,4 +1,4 @@
-package com.check24.demo.api.dto;
+package com.interview.demo.api.dto;
 
 import lombok.Builder;
 

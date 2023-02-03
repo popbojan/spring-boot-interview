@@ -1,4 +1,4 @@
-package com.check24.demo.entity;
+package com.interview.demo.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

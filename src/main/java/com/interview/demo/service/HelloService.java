@@ -1,6 +1,6 @@
-package com.check24.demo.service;
+package com.interview.demo.service;
 
-import com.check24.demo.entity.Hello;
+import com.interview.demo.entity.Hello;
 
 import java.util.Optional;
 

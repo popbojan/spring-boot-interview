@@ -1,8 +1,8 @@
-package com.check24.demo.api;
+package com.interview.demo.api;
 
-import com.check24.demo.api.dto.HelloDTO;
-import com.check24.demo.entity.Hello;
-import com.check24.demo.repository.HelloRepository;
+import com.interview.demo.api.dto.HelloDTO;
+import com.interview.demo.entity.Hello;
+import com.interview.demo.repository.HelloRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,7 +37,7 @@ public class HelloControllerTests {
         hello.setName("Bojan");
         helloRepository.saveAndFlush(hello);
 
-        var uri = UriComponentsBuilder.fromHttpUrl("http://localhost:8080/").queryParam("name", "Bojan").build().toUri();
+        var uri = UriComponentsBuilder.fromHttpUrl("http://localhost:8080/hello").queryParam("name", "Bojan").build().toUri();
         ResponseEntity<HelloDTO> response = template.getForEntity(uri, HelloDTO.class);
 
         assertThat(response.getBody().name()).isEqualTo("Bojan");

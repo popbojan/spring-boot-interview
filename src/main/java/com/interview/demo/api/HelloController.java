@@ -1,8 +1,8 @@
-package com.check24.demo.api;
+package com.interview.demo.api;
 
-import com.check24.demo.api.dto.HelloDTO;
-import com.check24.demo.api.mapper.HelloMapper;
-import com.check24.demo.service.HelloService;
+import com.interview.demo.api.dto.HelloDTO;
+import com.interview.demo.api.mapper.HelloMapper;
+import com.interview.demo.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ public class HelloController {
     @Autowired
     HelloService helloService;
 
-    @GetMapping("/")
+    @GetMapping("/hello")
     public ResponseEntity<HelloDTO> index(@RequestParam(required = false) String name) {
 
         return helloService.getHelloMessage(name)

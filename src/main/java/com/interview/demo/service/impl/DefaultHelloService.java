@@ -1,8 +1,8 @@
-package com.check24.demo.service.impl;
+package com.interview.demo.service.impl;
 
-import com.check24.demo.entity.Hello;
-import com.check24.demo.repository.HelloRepository;
-import com.check24.demo.service.HelloService;
+import com.interview.demo.entity.Hello;
+import com.interview.demo.repository.HelloRepository;
+import com.interview.demo.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
