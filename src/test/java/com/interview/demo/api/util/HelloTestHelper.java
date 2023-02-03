@@ -24,7 +24,7 @@ public final class HelloTestHelper {
     private static ExtractableResponse<Response> getHello(final String name, final String url, final int status) {
         final var requestSpecification = given().when();
         Optional.ofNullable(name).ifPresent(param -> requestSpecification.queryParam("name", param));
-        return requestSpecification.get(String.format(url + HELLO_PATH)).then().statusCode(status).extract();
+        return requestSpecification.get(url + HELLO_PATH).then().statusCode(status).extract();
     }
 
     public static String getURL(final int port){
