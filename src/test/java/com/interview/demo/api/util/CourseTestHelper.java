@@ -53,8 +53,7 @@ public final class CourseTestHelper {
         Optional.ofNullable(courseId).ifPresent(param -> requestSpecification.pathParam("courseId", param));
         Optional.ofNullable(studentId).ifPresent(param -> requestSpecification.pathParam("studentId", param));
         Optional.ofNullable(grade).ifPresent(param -> requestSpecification.pathParam("grade", param));
-        return given().contentType(ContentType.JSON)
-                .when()
+        return requestSpecification.contentType(ContentType.JSON)
                 .put(url + GRADE_STUDENT_PATH)
                 .then()
                 .statusCode(HttpStatus.SC_OK)
