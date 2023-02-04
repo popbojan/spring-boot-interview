@@ -40,9 +40,9 @@ public class DefaultCourseService implements CourseService {
     public void gradeCourse(final Long courseId, Long studentId, final int grade) {
         var course = courseRepository.findById(courseId).orElseThrow(() ->  new EntityNotFoundException("Course not Found"));
         var student = studentRepository.findById(studentId).orElseThrow(() -> new EntityNotFoundException("Student Not Found"));
-        var courseUser = courseStudentRepository.findByCourseAndStudent(course, student);
+        var courseStudent = courseStudentRepository.findByCourseAndStudent(course, student);
 
-        courseUser.ifPresentOrElse(cu -> {
+        courseStudent.ifPresentOrElse(cu -> {
             cu.setGrade(grade);
             courseStudentRepository.save(cu);
         }, () -> {

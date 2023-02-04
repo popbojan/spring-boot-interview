@@ -1,7 +1,7 @@
 package com.interview.demo.api;
 
 import com.interview.demo.api.dto.HelloDTO;
-import com.interview.demo.api.mapper.HelloMapper;
+import com.interview.demo.api.dto.mapper.HelloMapper;
 import com.interview.demo.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

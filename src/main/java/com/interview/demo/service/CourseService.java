@@ -10,6 +10,6 @@ public interface CourseService {
 
     List<Course> findByName(String name);
 
-    void gradeCourse(Long filmId, Long userId, int grade);
+    void gradeCourse(Long courseId, Long studentId, int grade);
 }
 

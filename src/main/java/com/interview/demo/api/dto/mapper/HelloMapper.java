@@ -1,4 +1,4 @@
-package com.interview.demo.api.mapper;
+package com.interview.demo.api.dto.mapper;
 
 import com.interview.demo.api.dto.HelloDTO;
 import com.interview.demo.entity.Hello;
