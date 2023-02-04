@@ -48,7 +48,7 @@ public final class CourseTestHelper {
     }
 
 
-    public static ResponseEntity gradeStudentSuccessful(final Long courseId, final Long studentId, final Integer grade, final String url) {
+    public static ExtractableResponse<Response> gradeStudentSuccessful(final Long courseId, final Long studentId, final Integer grade, final String url) {
         final var requestSpecification = given().when();
         Optional.ofNullable(courseId).ifPresent(param -> requestSpecification.pathParam("courseId", param));
         Optional.ofNullable(studentId).ifPresent(param -> requestSpecification.pathParam("studentId", param));
@@ -57,8 +57,7 @@ public final class CourseTestHelper {
                 .put(url + GRADE_STUDENT_PATH)
                 .then()
                 .statusCode(HttpStatus.SC_OK)
-                .extract()
-                .as(new TypeReference<ResponseEntity>() {}.getType());
+                .extract();
     }
 
     public static String getURL(final int port) {

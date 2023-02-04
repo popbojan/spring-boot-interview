@@ -2,6 +2,7 @@ package com.interview.demo.service.impl;
 
 import com.interview.demo.entity.Course;
 import com.interview.demo.entity.CourseStudent;
+import com.interview.demo.entity.CourseStudentKey;
 import com.interview.demo.repository.CourseRepository;
 import com.interview.demo.repository.CourseStudentRepository;
 import com.interview.demo.repository.StudentRepository;
@@ -43,14 +44,26 @@ public class DefaultCourseService implements CourseService {
         var courseStudent = courseStudentRepository.findByCourseAndStudent(course, student);
 
         courseStudent.ifPresentOrElse(cu -> {
-            cu.setGrade(grade);
-            courseStudentRepository.save(cu);
+            saveGrade(cu, grade);
         }, () -> {
             var cu = new CourseStudent();
+            cu.setId(getKey(course.getId(), student.getId()));
             cu.setCourse(course);
             cu.setStudent(student);
-            cu.setGrade(grade);
+            saveGrade(cu, grade);
         });
+    }
+
+    private void saveGrade(final CourseStudent courseStudent, final int grade){
+        courseStudent.setGrade(grade);
+        courseStudentRepository.save(courseStudent);
+    }
+
+    private static CourseStudentKey getKey(final long courseId, final long studentId){
+        CourseStudentKey key = new CourseStudentKey();
+        key.setCourseId(courseId);
+        key.setStudentId(studentId);
+        return key;
     }
 
 }

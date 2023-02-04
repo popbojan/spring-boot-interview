@@ -38,23 +38,46 @@ public final class CourseControllerGradeStudentTests {
         studentRepository.deleteAll();
     }
 
-    //@Test
-    public void gradeStudent(){
+    @Test
+    public void gradeNewStudentCourse(){
+        final var courseName = RandomStringUtils.random(20);
+        final var newStudentGrade = 3;
+        final var firstName = RandomStringUtils.random(20);
+        final var lastName = RandomStringUtils.random(20);
+        final var course = CourseTestHelper.buildAndSave(courseRepository, courseName);
+        final var student = StudentTestHelper.buildAndSave(studentRepository, firstName, lastName);
+
+        var response = CourseTestHelper.gradeStudentSuccessful(course.getId(), student.getId(), newStudentGrade,
+                CourseTestHelper.getURL(port));
+
+        var courseStudentResult = courseStudentRepository.findByCourseAndStudent(course, student);
+
+        assertThat(response.statusCode()).isEqualTo(HttpStatus.SC_OK);
+        assertThat(courseStudentResult.isPresent()).isTrue();
+        assertThat(courseStudentResult.get().getGrade()).isEqualTo(newStudentGrade);
+    }
+
+    @Test
+    public void gradeStudentCourseAgain(){
 
         final var courseName = RandomStringUtils.random(20);
-        final var studentGrade = 2;
+        final var oldStudentGrade = 2;
+        final var newStudentGrade = 4;
         final var firstName = RandomStringUtils.random(20);
         final var lastName = RandomStringUtils.random(20);
 
         final var course = CourseTestHelper.buildAndSave(courseRepository, courseName);
         final var student = StudentTestHelper.buildAndSave(studentRepository, firstName, lastName);
-        CourseStudentTestHelper.buildAndSave(courseStudentRepository, course, student, studentGrade);
+        CourseStudentTestHelper.buildAndSave(courseStudentRepository, course, student, oldStudentGrade);
 
-        var response = CourseTestHelper.gradeStudentSuccessful(course.getId(), student.getId(), studentGrade,
+        var response = CourseTestHelper.gradeStudentSuccessful(course.getId(), student.getId(), newStudentGrade,
                 CourseTestHelper.getURL(port));
 
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.SC_OK);
+        var courseStudentResult = courseStudentRepository.findByCourseAndStudent(course, student);
 
+        assertThat(response.statusCode()).isEqualTo(HttpStatus.SC_OK);
+        assertThat(courseStudentResult.isPresent());
+        assertThat(courseStudentResult.get().getGrade()).isEqualTo(newStudentGrade);
 
     }
 
