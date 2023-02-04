@@ -3,10 +3,10 @@ package com.interview.demo.command;
 import java.util.Arrays;
 
 /**
- * RUN: java -ea src/main/java/com/interview/demo/command/CheckAnagrams.java "flop aaa" "olfp aaa"
+ * RUN: java -ea src/main/java/com/interview/demo/command/CompareAnagramsEquality.java "flop aaa" "olfp aaa"
  * -ea stands for 'enable assertion'
  */
-public class CheckAnagrams {
+public class CompareAnagramsEquality {
 
     // O(nLog(n)) Time
     // O(n) Space
@@ -18,7 +18,7 @@ public class CheckAnagrams {
             assert getSortedWord(word1).equals(getSortedWord(word2)) : "Words are not anagrams!";
             System.out.println("Words " + word1 + " and " + word2 + " are anagrams");
         } else {
-            throw new RuntimeException("CheckAnagrams.java expects two arguments");
+            throw new RuntimeException("CompareAnagramsEquality.java expects two arguments");
         }
     }
     public static String getSortedWord(final String word) {
