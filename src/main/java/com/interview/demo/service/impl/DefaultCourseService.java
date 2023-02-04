@@ -37,7 +37,7 @@ public class DefaultCourseService implements CourseService {
 
     @Override
     @Transactional
-    public void gradeCourse(final Long courseId, Long studentId, final int grade) {
+    public void gradeStudent(final Long courseId, Long studentId, final int grade) {
         var course = courseRepository.findById(courseId).orElseThrow(() ->  new EntityNotFoundException("Course not Found"));
         var student = studentRepository.findById(studentId).orElseThrow(() -> new EntityNotFoundException("Student Not Found"));
         var courseStudent = courseStudentRepository.findByCourseAndStudent(course, student);

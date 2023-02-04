@@ -32,7 +32,7 @@ public class CourseController {
             @PathVariable(name = "courseId") Long courseId,
             @PathVariable(name = "studentId") Long studentId,
             @PathVariable int grade) {
-        courseService.gradeCourse(courseId, studentId, grade);
+        courseService.gradeStudent(courseId, studentId, grade);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }
