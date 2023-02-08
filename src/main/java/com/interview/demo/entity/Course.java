@@ -11,10 +11,6 @@ import org.jetbrains.annotations.NotNull;
 @Entity
 public class Course extends AuditableEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @NotNull
     @Column(name = "name")
     @ToString.Exclude
