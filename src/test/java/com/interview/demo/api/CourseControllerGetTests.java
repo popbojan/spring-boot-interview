@@ -1,7 +1,7 @@
 package com.interview.demo.api;
 
 import com.interview.demo.api.util.CourseTestHelper;
-import com.interview.demo.datasource.CourseRepository;
+import com.interview.demo.datasource.repository.CourseRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

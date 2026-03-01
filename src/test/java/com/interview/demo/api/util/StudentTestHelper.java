@@ -1,7 +1,7 @@
 package com.interview.demo.api.util;
 
 import com.interview.demo.datasource.entity.Student;
-import com.interview.demo.datasource.StudentRepository;
+import com.interview.demo.datasource.repository.StudentRepository;
 
 public class StudentTestHelper {
 

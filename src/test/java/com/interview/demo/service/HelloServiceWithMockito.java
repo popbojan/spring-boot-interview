@@ -1,7 +1,7 @@
 package com.interview.demo.service;
 
 import com.interview.demo.datasource.entity.Hello;
-import com.interview.demo.datasource.HelloRepository;
+import com.interview.demo.datasource.repository.HelloRepository;
 import com.interview.demo.service.impl.DefaultHelloService;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Test;

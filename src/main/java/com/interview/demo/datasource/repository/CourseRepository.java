@@ -1,4 +1,4 @@
-package com.interview.demo.datasource;
+package com.interview.demo.datasource.repository;
 
 import com.interview.demo.datasource.entity.Course;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -2,7 +2,7 @@ package com.interview.demo.api;
 
 import com.interview.demo.api.util.HelloTestHelper;
 import com.interview.demo.datasource.entity.Hello;
-import com.interview.demo.datasource.HelloRepository;
+import com.interview.demo.datasource.repository.HelloRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

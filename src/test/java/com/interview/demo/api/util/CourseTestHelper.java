@@ -3,7 +3,7 @@ package com.interview.demo.api.util;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.interview.demo.api.dto.CoursePageDTO;
 import com.interview.demo.datasource.entity.Course;
-import com.interview.demo.datasource.CourseRepository;
+import com.interview.demo.datasource.repository.CourseRepository;
 import io.restassured.http.ContentType;
 import io.restassured.response.ExtractableResponse;
 import io.restassured.response.Response;

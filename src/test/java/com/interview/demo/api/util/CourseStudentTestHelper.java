@@ -4,7 +4,7 @@ import com.interview.demo.datasource.entity.Course;
 import com.interview.demo.datasource.entity.CourseStudent;
 import com.interview.demo.datasource.entity.CourseStudentKey;
 import com.interview.demo.datasource.entity.Student;
-import com.interview.demo.datasource.CourseStudentRepository;
+import com.interview.demo.datasource.repository.CourseStudentRepository;
 import org.apache.commons.lang3.RandomUtils;
 
 public class CourseStudentTestHelper {
