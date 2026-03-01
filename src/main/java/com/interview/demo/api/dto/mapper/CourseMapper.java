@@ -2,7 +2,7 @@ package com.interview.demo.api.dto.mapper;
 
 import com.interview.demo.api.dto.CourseDTO;
 import com.interview.demo.api.dto.CoursePageDTO;
-import com.interview.demo.entity.Course;
+import com.interview.demo.datasource.entity.Course;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 

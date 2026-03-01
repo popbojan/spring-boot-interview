@@ -1,6 +1,6 @@
-package com.interview.demo.repository;
+package com.interview.demo.datasource;
 
-import com.interview.demo.entity.Course;
+import com.interview.demo.datasource.entity.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

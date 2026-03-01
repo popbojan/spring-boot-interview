@@ -1,7 +1,7 @@
 package com.interview.demo.api.dto.mapper;
 
 import com.interview.demo.api.dto.HelloDTO;
-import com.interview.demo.entity.Hello;
+import com.interview.demo.datasource.entity.Hello;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 

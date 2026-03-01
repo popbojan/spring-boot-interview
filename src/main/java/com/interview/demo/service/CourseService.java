@@ -1,6 +1,6 @@
 package com.interview.demo.service;
 
-import com.interview.demo.entity.Course;
+import com.interview.demo.datasource.entity.Course;
 
 import java.util.List;
 

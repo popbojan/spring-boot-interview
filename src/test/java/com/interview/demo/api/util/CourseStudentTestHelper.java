@@ -1,10 +1,10 @@
 package com.interview.demo.api.util;
 
-import com.interview.demo.entity.Course;
-import com.interview.demo.entity.CourseStudent;
-import com.interview.demo.entity.CourseStudentKey;
-import com.interview.demo.entity.Student;
-import com.interview.demo.repository.CourseStudentRepository;
+import com.interview.demo.datasource.entity.Course;
+import com.interview.demo.datasource.entity.CourseStudent;
+import com.interview.demo.datasource.entity.CourseStudentKey;
+import com.interview.demo.datasource.entity.Student;
+import com.interview.demo.datasource.CourseStudentRepository;
 import org.apache.commons.lang3.RandomUtils;
 
 public class CourseStudentTestHelper {

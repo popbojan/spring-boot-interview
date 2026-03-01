@@ -1,6 +1,6 @@
 package com.interview.demo.service;
 
-import com.interview.demo.entity.Hello;
+import com.interview.demo.datasource.entity.Hello;
 
 import java.util.Optional;
 

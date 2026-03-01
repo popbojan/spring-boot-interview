@@ -2,13 +2,12 @@ package com.interview.demo.api.util;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.interview.demo.api.dto.CoursePageDTO;
-import com.interview.demo.entity.Course;
-import com.interview.demo.repository.CourseRepository;
+import com.interview.demo.datasource.entity.Course;
+import com.interview.demo.datasource.CourseRepository;
 import io.restassured.http.ContentType;
 import io.restassured.response.ExtractableResponse;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 
 import java.util.Optional;
 

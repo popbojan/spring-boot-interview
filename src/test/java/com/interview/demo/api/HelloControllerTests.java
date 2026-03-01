@@ -1,8 +1,8 @@
 package com.interview.demo.api;
 
 import com.interview.demo.api.dto.HelloDTO;
-import com.interview.demo.entity.Hello;
-import com.interview.demo.repository.HelloRepository;
+import com.interview.demo.datasource.entity.Hello;
+import com.interview.demo.datasource.HelloRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

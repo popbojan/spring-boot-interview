@@ -1,4 +1,4 @@
-package com.interview.demo.entity;
+package com.interview.demo.datasource.entity;
 
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;

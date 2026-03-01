@@ -1,11 +1,11 @@
 package com.interview.demo.service.impl;
 
-import com.interview.demo.entity.Course;
-import com.interview.demo.entity.CourseStudent;
-import com.interview.demo.entity.CourseStudentKey;
-import com.interview.demo.repository.CourseRepository;
-import com.interview.demo.repository.CourseStudentRepository;
-import com.interview.demo.repository.StudentRepository;
+import com.interview.demo.datasource.entity.Course;
+import com.interview.demo.datasource.entity.CourseStudent;
+import com.interview.demo.datasource.entity.CourseStudentKey;
+import com.interview.demo.datasource.CourseRepository;
+import com.interview.demo.datasource.CourseStudentRepository;
+import com.interview.demo.datasource.StudentRepository;
 import com.interview.demo.service.CourseService;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
