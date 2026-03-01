@@ -2,6 +2,7 @@ package com.interview.demo.api.dto.mapper;
 
 import com.interview.demo.domain.order.Order;
 import com.interview.demo.api.dto.OrderDto;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -23,5 +24,9 @@ public class OrderMapper {
         orderDTO.setTotalAmount(order.totalAmount());
         orderDTO.setCreatedAt(order.createdAt());
         return orderDTO;
+    }
+
+    public Page<OrderDto> toDto(Page<Order> page) {
+        return page.map(this::toDto);
     }
 }

@@ -2,6 +2,7 @@ package com.interview.demo.datasource.mapper;
 
 import com.interview.demo.domain.order.Order;
 import com.interview.demo.datasource.entity.OrderEntity;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -22,5 +23,9 @@ public class OrderEntityMapper {
         final var order = new Order(entity.getId(), entity.getOrderNumber(), entity.getCustomerEmail(), entity.getOrderStatus(),
                 entity.getTotalAmount(), entity.getCreatedAt());
         return order;
+    }
+
+    public Page<Order> toModel(Page<OrderEntity> pageEntity) {
+        return pageEntity.map(this::toModel);
     }
 }

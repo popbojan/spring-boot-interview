@@ -5,6 +5,8 @@ import com.interview.demo.domain.order.OrderDatasource;
 import com.interview.demo.datasource.mapper.OrderEntityMapper;
 import com.interview.demo.datasource.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -30,5 +32,10 @@ public class OrderDatasourceImpl implements OrderDatasource {
         final var orderEntity = mapper.toEntity(order);
         final var persisted = repository.save(orderEntity);
         return mapper.toModel(persisted);
+    }
+
+    @Override
+    public Page<Order> getAll(Pageable pageable) {
+        return mapper.toModel(repository.findAll(pageable));
     }
 }
